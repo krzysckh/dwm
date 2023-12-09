@@ -65,6 +65,7 @@ static const char *ffcmd[]    = { "firefox", NULL };
 static const char *emojicmd[] = { "emoji", NULL };
 static const char *xlockcmd[] = { "xlock", "-mode", "random", NULL };
 static const char *ytclipcmd[] = { "ytclip", NULL };
+static const char *gvimcmd[] = { "gvim", ".", NULL };
 static const char *scrotcmd[] = {
   "scrot",
   "-s",
@@ -87,11 +88,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_o,      spawn,          {.v = xlockcmd } },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = scrotcmd } },
 	{ MODKEY,                       XK_y,      spawn,          {.v = ytclipcmd } },
+	{ MODKEY,                       XK_g,      spawn,          {.v = gvimcmd} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_h,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_l,      focusstack,     {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_d,      incnmaster,     {.i = -1 } },
+	//{ MODKEY|ShiftMask,             XK_i,      incnmaster,     {.i = +1 } },
+	//{ MODKEY|ShiftMask,             XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY|ShiftMask,             XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
@@ -105,8 +107,8 @@ static Key keys[] = {
 	/*{ MODKEY|ShiftMask,             XK_r,      setlayout,      {.v = &layouts[4]} },*/
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
-	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
-	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
+	//{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
+	//{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
