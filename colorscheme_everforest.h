@@ -1,4 +1,4 @@
-#define USER "krzych"
+#define USER "kpm"
 
 /*
   \ 'bg0':        ['#2b3339',   '235'],
