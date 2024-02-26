@@ -24,8 +24,8 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Gimp",     NULL,       NULL,       0,            0,           -1 },
+	//{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
@@ -66,6 +66,7 @@ static const char *emojicmd[] = { "emoji", NULL };
 static const char *xlockcmd[] = { "xlock", "-mode", "random", NULL };
 static const char *ytclipcmd[] = { "ytclip", NULL };
 static const char *gvimcmd[] = { "gvim", ".", NULL };
+static const char *zoomcmd[] = { "boomer", NULL };
 static const char *scrotcmd[] = {
   "scrot",
   "-s",
@@ -89,6 +90,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = scrotcmd } },
 	{ MODKEY,                       XK_y,      spawn,          {.v = ytclipcmd } },
 	{ MODKEY,                       XK_g,      spawn,          {.v = gvimcmd} },
+	{ MODKEY,                       XK_z,      spawn,          {.v = zoomcmd} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_h,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_l,      focusstack,     {.i = -1 } },
