@@ -29,8 +29,13 @@
           \ 'none':       ['NONE',      'NONE']
           */
 
+#ifdef __OpenBSD__
+static const char *fonts[]          = { "Lilex :size=7" };
+static const char dmenufont[]       = "Lilex:size=7";
+#else
 static const char *fonts[]          = { "Lilex :size=10" };
 static const char dmenufont[]       = "Lilex:size=10";
+#endif
 static const char col_gray1[]       = "#2b3339";
 static const char col_gray2[]       = "#53605c";
 static const char col_gray3[]       = "#d3c6aa";

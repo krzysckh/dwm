@@ -1,7 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 #ifdef __OpenBSD__
-#include "colorscheme_typewriter.h"
+// #include "colorscheme_typewriter.h"
+#include "colorscheme_everforest.h"
 #else
 #include "colorscheme_everforest.h"
 #endif
